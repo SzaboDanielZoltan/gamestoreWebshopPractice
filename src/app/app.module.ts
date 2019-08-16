@@ -11,6 +11,7 @@ import { ProductsMainComponent } from './page/products-main/products-main.compon
 import { MakeorderComponent } from './page/makeorder/makeorder.component';
 import { ChangeorderComponent } from './page/changeorder/changeorder.component';
 import { ChangeproductComponent } from './page/changeproduct/changeproduct.component';
+import { NavbarComponent } from './page/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ChangeproductComponent } from './page/changeproduct/changeproduct.compo
     ProductsMainComponent,
     MakeorderComponent,
     ChangeorderComponent,
-    ChangeproductComponent
+    ChangeproductComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

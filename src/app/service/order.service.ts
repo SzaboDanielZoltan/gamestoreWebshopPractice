@@ -8,29 +8,33 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class OrderService {
-
-  /* orders: Order[] = [
-    new Order(),
-    new Order(),
-    new Order(),
-  ]; */
+  urlForServer = '';
+  oneOfTheDatas = '';
 
   constructor(
     private http: HttpClient,
     private router: Router
-  ) { }
-
-  getAll(): Observable<any> {
-    const urlForServer = this.router.url.split('/')[2];
-    let oneOfTheDatas = '';
+  ) {
+    this.urlForServer = this.router.url.split('/')[2];
     if (this.router.url.split('/')[3] != undefined) {
-      oneOfTheDatas = `/${this.router.url.split('/')[3]}`;
+      this.oneOfTheDatas = `/${this.router.url.split('/')[3]}`;
     }
-    console.log(this.router.url.split('/'));
-    return this.http.get(`http://localhost:3210/${urlForServer}${oneOfTheDatas}`);
-    /* return new Observable(observer => {
-      observer.next(this.orders);
-    }) */
+  }
+
+  getAll(jsonName, id): Observable<any> {
+    return this.http.get(`http://localhost:3210/${jsonName}/${id}`);
+  }
+
+  add(object): Observable<any> {
+    return this.http.post(`http://localhost:3210/${this.urlForServer}${this.oneOfTheDatas}`, object);
+  }
+
+  edit(object): Observable<any> {
+    return this.http.put(`http://localhost:3210/${this.urlForServer}${this.oneOfTheDatas}`, object);
+  }
+
+  remove(object): Observable<any> {
+    return this.http.delete(`http://localhost:3210/${this.urlForServer}${this.oneOfTheDatas}`);
   }
 
 }
