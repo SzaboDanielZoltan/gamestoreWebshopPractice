@@ -40,4 +40,42 @@ module.exports = class DB {
       });
     });
   }
+
+  postToJsonArray(newObject) {
+    this.getJsonArray().then(
+      (jsonArray) => {
+        let newID = 0;
+        jsonArray.forEach(el => (el.id >= newID ? newID = el.id : newID));
+        newObject.id = newID + 1;
+        jsonArray.push(newObject);
+        fs.writeFile(this.jsonFilePath, JSON.stringify(jsonArray), 'utf8', err => console.error(err));
+      },
+    );
+  }
+
+  putToJsonArray(modifiedObject) {
+    this.getJsonArray().then(
+      (jsonArray) => {
+        jsonArray.forEach((el) => {
+          if (el.id == modifiedObject.id) {
+            for (const k in el) {
+              el[k] = modifiedObject[k];
+            }
+          }
+        });
+        console.log(JSON.stringify(modifiedObject));
+        fs.writeFile(this.jsonFilePath, JSON.stringify(jsonArray), 'utf8', err => console.error(err));
+      },
+    );
+  }
+
+  deleteFromJsonArray(deleteID) {
+    this.getJsonArray().then(
+      (jsonArray) => {
+        const indexOf = jsonArray.findIndex(el => el.id === deleteID);
+        jsonArray.splice(indexOf, 1);
+        fs.writeFile(this.jsonFilePath, JSON.stringify(jsonArray), 'utf8', err => console.error(err));
+      },
+    );
+  }
 };
