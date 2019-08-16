@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "insdate": "2019-08-16",
+    "product": 3,
+    "quantity": 3,
+    "userName": "Nagy Piroska",
+    "userEmail": "npm@npm.hu",
+    "shippingAddress": "Bp, Nagy Kálmán tér 5."
+  },
+  {
+    "id": 2,
+    "insdate": "2019-08-10",
+    "product": 4,
+    "quantity": 2,
+    "userName": "Nagy János",
+    "userEmail": "npm@google.hu",
+    "shippingAddress": "Bp, Nagy Kálmán tér 115."
+  }
+]
