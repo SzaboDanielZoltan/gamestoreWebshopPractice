@@ -1,10 +1,11 @@
-<table>
-  <thead>
+<table class="table">
+  <thead class="thead-light">
     <tr>
       <th>ID</th>
       <th>Name</th>
       <th>Description</th>
       <th>Color</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -13,6 +14,8 @@
       <td>{{ product.name }}</td>
       <td>{{ product.description }}</td>
       <td>{{ product.color }}</td>
+      <td><button type="button"
+                (click)="deleteProduct(product)">Remove product</button></td>
     </tr>
   </tbody>
 </table>

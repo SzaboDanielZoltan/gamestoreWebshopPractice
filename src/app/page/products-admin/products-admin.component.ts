@@ -13,6 +13,7 @@ export class ProductsAdminComponent implements OnInit, OnDestroy {
   list;
   urlForServer = '';
   oneOfTheDatas = '';
+  counter = 0;
 
   constructor(
     private orderService: OrderService,
@@ -24,6 +25,16 @@ export class ProductsAdminComponent implements OnInit, OnDestroy {
     };
   }
 
+  deleteProduct(productObj) {
+    console.log(productObj);
+    this.orderService.remove(productObj).forEach(
+      data => {
+        let index = this.list.indexOf(productObj);
+        this.list.splice(index, 1);
+        this.counter++;
+      }
+    )
+  }
 
   ngOnInit() {
     this.userSubscription = this.orderService.getAll(this.urlForServer, this.oneOfTheDatas).subscribe(

@@ -72,7 +72,7 @@ module.exports = class DB {
   deleteFromJsonArray(deleteID) {
     this.getJsonArray().then(
       (jsonArray) => {
-        const indexOf = jsonArray.findIndex(el => el.id === deleteID);
+        const indexOf = jsonArray.findIndex(el => el.id == deleteID);
         jsonArray.splice(indexOf, 1);
         fs.writeFile(this.jsonFilePath, JSON.stringify(jsonArray), 'utf8', err => console.error(err));
       },

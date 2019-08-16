@@ -34,7 +34,7 @@ export class OrderService {
   }
 
   remove(object): Observable<any> {
-    return this.http.delete(`http://localhost:3210/${this.urlForServer}${this.oneOfTheDatas}`);
+    return this.http.delete(`http://localhost:3210/${this.urlForServer}/${object.id}`);
   }
 
 }
