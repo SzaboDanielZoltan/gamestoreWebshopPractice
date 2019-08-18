@@ -8,7 +8,8 @@
     "release": "21 Mar, 2019",
     "publisher": "Activision",
     "metacritic": 88,
-    "price": 59.99
+    "price": 59.99,
+    "pic": "assets/gamepic/assassinscreedodyssey.jpg"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "release": "21 Dec, 2017",
     "publisher": "PUBG Corporation",
     "metacritic": 86,
-    "price": 29.99
+    "price": 29.99,
+    "pic": "assets/gamepic/pubg.jpg"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "release": "14 Apr, 2015",
     "publisher": "Rockstar Games",
     "metacritic": 96,
-    "price": 29.99
+    "price": 29.99,
+    "pic": "assets/gamepic/gtaV.jpg"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "release": "8 Feb, 2018",
     "publisher": "Facepunch Studios",
     "metacritic": 69,
-    "price": 29.99
+    "price": 29.99,
+    "pic": "assets/gamepic/rust.jpg"
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "release": "1 Dec, 2015",
     "publisher": "Ubisoft",
     "metacritic": 78,
-    "price": 19.99
+    "price": 19.99,
+    "pic": "assets/gamepic/rainbow6.jpg"
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@
     "release": "1 Oct, 2019",
     "publisher": "Bungie",
     "metacritic": 83,
-    "price": 34.99
+    "price": 34.99,
+    "pic": "assets/gamepic/destiny2.jpg"
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@
     "release": "2 Dec, 2016",
     "publisher": "Ubisoft",
     "metacritic": 72,
-    "price": 7.49
+    "price": 7.49,
+    "pic": "assets/gamepic/steep.jpg"
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
     "release": "5 Oct, 2018",
     "publisher": "Ubisoft",
     "metacritic": 86,
-    "price": 59.99
+    "price": 59.99,
+    "pic": "assets/gamepic/assassinscreedodyssey.jpg"
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@
     "release": "12 Nov, 2012",
     "publisher": "Activision",
     "metacritic": 74,
-    "price": 59.99
+    "price": 59.99,
+    "pic": "assets/gamepic/codblackops2.jpg"
   },
   {
     "id": 10,
@@ -107,7 +116,8 @@
     "release": "28 Oct, 2016",
     "publisher": "Bethesda Softworks",
     "metacritic": 74,
-    "price": 39.99
+    "price": 39.99,
+    "pic": "assets/gamepic/skyrim.jpg"
   },
   {
     "id": 11,
@@ -118,7 +128,8 @@
     "release": "13 May, 2016",
     "publisher": "Bethesda Softworks",
     "metacritic": 85,
-    "price": 19.99
+    "price": 19.99,
+    "pic": "assets/gamepic/doom.jpg"
   },
   {
     "id": 12,
@@ -129,7 +140,8 @@
     "release": "23 May, 2019",
     "publisher": "SEGA",
     "metacritic": 85,
-    "price": 59.99
+    "price": 59.99,
+    "pic": "assets/gamepic/totalwar.jpg"
   },
   {
     "id": 13,
@@ -140,7 +152,8 @@
     "release": "2 Nov, 2018",
     "publisher": "SEGA",
     "metacritic": 86,
-    "price": 54.99
+    "price": 54.99,
+    "pic": "assets/gamepic/footballmanager.jpg"
   },
   {
     "id": 14,
@@ -151,7 +164,8 @@
     "release": "13 Aug, 2013",
     "publisher": "Starbreeze Publishing AB",
     "metacritic": 79,
-    "price": 9.99
+    "price": 9.99,
+    "pic": "assets/gamepic/payday2.jpg"
   },
   {
     "id": 15,
@@ -162,6 +176,7 @@
     "release": "21 Sep, 2012",
     "publisher": "2K",
     "metacritic": 79,
-    "price": 9.99
+    "price": 9.99,
+    "pic": "assets/gamepic/borderlands2.jpg"
   }
 ]
