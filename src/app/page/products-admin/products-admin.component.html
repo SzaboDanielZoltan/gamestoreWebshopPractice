@@ -24,9 +24,16 @@
             <td>{{ product.publisher }}</td>
             <td>{{ product.price | currency:'EUR'}}</td>
             <td>{{ product.metacritic }}</td>
-            <td><button type="button"
-                      class="btn btn-danger"
-                      (click)="deleteProduct(product)">Remove product</button></td>
+            <td>
+              <div class="btn-group btn-block">
+                <button type="button"
+                        class="btn btn-warning"
+                        routerLink="/admin/products/{{product.id}}">Edit</button>
+                <button type="button"
+                        class="btn btn-danger"
+                        (click)="deleteProduct(product)">Remove</button>
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>

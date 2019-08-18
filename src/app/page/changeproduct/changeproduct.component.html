@@ -4,50 +4,70 @@
       <h1>Edit User</h1>
       <form (submit)="onSubmit($event)"
             action="">
-
         <div class="form-group">
-          <label for="firstname">Firstname</label>
-          <input name="firstname"
-                 [(ngModel)]="user.name.first"
+          <label for="title">Title</label>
+          <input name="title"
+                 id="title"
+                 [(ngModel)]="product.title"
                  type="text"
                  class="form-control">
         </div>
         <div class="form-group">
-          <label for="lastname">Lastname</label>
-          <input name="lastname"
-                 [(ngModel)]="user.name.last"
+          <label for="type">Genre</label>
+          <input name="type"
+                 id="type"
+                 [(ngModel)]="product.type"
                  type="text"
                  class="form-control">
         </div>
         <div class="form-group">
-          <label for="active">Active</label>
-          <input name="active"
-                 [(ngModel)]="user.isActive"
-                 type="checkbox"
-                 class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="age">Age</label>
-          <input name="age"
-                 [(ngModel)]="user.age"
+          <label for="short">Short decription</label>
+          <input name="short"
+                 id="short"
+                 [(ngModel)]="product.short"
                  type="text"
                  class="form-control">
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
-          <input name="email"
-                 [(ngModel)]="user.email"
+          <label for="description">Full decription</label>
+          <input name="description"
+                 id="description"
+                 [(ngModel)]="product.description"
                  type="text"
                  class="form-control">
         </div>
         <div class="form-group">
-          <label for="phone">Phone</label>
-          <input name="phone"
-                 [(ngModel)]="user.phone"
+          <label for="release">Release date</label>
+          <input name="release"
+                 id="release"
+                 [(ngModel)]="product.release"
                  type="text"
                  class="form-control">
         </div>
-
+        <div class="form-group">
+          <label for="publisher">Publisher</label>
+          <input name="publisher"
+                 id="publisher"
+                 [(ngModel)]="product.publisher"
+                 type="text"
+                 class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="metacritic">Metacritic score</label>
+          <input name="metacritic"
+                 id="metacritic"
+                 [(ngModel)]="product.metacritic"
+                 type="number"
+                 class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input name="price"
+                 id="price"
+                 [(ngModel)]="product.price"
+                 type="number"
+                 class="form-control">
+        </div>
         <button class="btn btn-primary">
           Save changes
         </button>
