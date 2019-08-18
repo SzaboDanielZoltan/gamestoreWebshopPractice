@@ -1,21 +1,35 @@
-<table class="table">
-  <thead class="thead-light">
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Color</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of list">
-      <td>{{ product.id }}</td>
-      <td>{{ product.name }}</td>
-      <td>{{ product.description }}</td>
-      <td>{{ product.color }}</td>
-      <td><button type="button"
-                (click)="deleteProduct(product)">Remove product</button></td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Publisher</th>
+            <th>Price</th>
+            <th>Metacritic</th>
+            <th>
+              <button class="btn btn-primary btn-block"
+                      routerLink="/admin/products/0">Add new game</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of list">
+            <td>{{ product.id }}</td>
+            <td>{{ product.title }}</td>
+            <td>{{ product.type }}</td>
+            <td>{{ product.publisher }}</td>
+            <td>{{ product.price | currency:'EUR'}}</td>
+            <td>{{ product.metacritic }}</td>
+            <td><button type="button"
+                      class="btn btn-danger"
+                      (click)="deleteProduct(product)">Remove product</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -25,8 +25,8 @@ export class OrderService {
     return this.http.get(`http://localhost:3210/${jsonName}/${id}`);
   }
 
-  add(object): Observable<any> {
-    return this.http.post(`http://localhost:3210/${this.urlForServer}${this.oneOfTheDatas}`, object);
+  add(jsonName, object): Observable<any> {
+    return this.http.post(`http://localhost:3210/${jsonName}`, object);
   }
 
   edit(object): Observable<any> {

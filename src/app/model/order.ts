@@ -1,9 +1,10 @@
 export class Order {
   id: number = 0;
-  insdate: Date = new Date();
-  product: number = 0;
-  quantity: number = 0;
+  orderdate: Date = new Date();
   userName: string = '';
   userEmail: string = '';
-  shippingAdress: string = '';
+  newsletter: boolean = false;
+  shippingAddress: string = '';
+  productId: number = 0;
+  amount: number = 1
 }

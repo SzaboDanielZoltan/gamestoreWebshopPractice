@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { OrderService } from 'src/app/service/order.service';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
+import { Product } from 'src/app/model/product';
 
 @Component({
   selector: 'app-products-admin',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ProductsAdminComponent implements OnInit, OnDestroy {
   userSubscription: Subscription;
-  list;
+  productList: Product[];
   urlForServer = '';
   oneOfTheDatas = '';
   counter = 0;
@@ -29,8 +30,8 @@ export class ProductsAdminComponent implements OnInit, OnDestroy {
     console.log(productObj);
     this.orderService.remove(productObj).forEach(
       data => {
-        let index = this.list.indexOf(productObj);
-        this.list.splice(index, 1);
+        let index = this.productList.indexOf(productObj);
+        this.productList.splice(index, 1);
         this.counter++;
       }
     )

@@ -1,1 +1,58 @@
-<p>changeproduct works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-4 offset-4">
+      <h1>Edit User</h1>
+      <form (submit)="onSubmit($event)"
+            action="">
+
+        <div class="form-group">
+          <label for="firstname">Firstname</label>
+          <input name="firstname"
+                 [(ngModel)]="user.name.first"
+                 type="text"
+                 class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="lastname">Lastname</label>
+          <input name="lastname"
+                 [(ngModel)]="user.name.last"
+                 type="text"
+                 class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="active">Active</label>
+          <input name="active"
+                 [(ngModel)]="user.isActive"
+                 type="checkbox"
+                 class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input name="age"
+                 [(ngModel)]="user.age"
+                 type="text"
+                 class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input name="email"
+                 [(ngModel)]="user.email"
+                 type="text"
+                 class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input name="phone"
+                 [(ngModel)]="user.phone"
+                 type="text"
+                 class="form-control">
+        </div>
+
+        <button class="btn btn-primary">
+          Save changes
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>

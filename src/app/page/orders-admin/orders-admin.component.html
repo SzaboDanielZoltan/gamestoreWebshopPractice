@@ -1,27 +1,36 @@
-<table class="table">
-  <thead class="thead-light">
-    <tr>
-      <th>ID:</th>
-      <th>Order date:</th>
-      <th>Product:</th>
-      <th>Quantity:</th>
-      <th>User name:</th>
-      <th>User email:</th>
-      <th>Shipping address:</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let order of list">
-      <td>{{ order.id }}</td>
-      <td>{{ order.insdate }}</td>
-      <td>{{ order.product }}</td>
-      <td>{{ order.quantity }}</td>
-      <td>{{ order.userName }}</td>
-      <td>{{ order.userEmail }}</td>
-      <td>{{ order.shippingAddress }}</td>
-      <td><button type="button"
-                (click)="deleteOrder(order)">Delete order</button></td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th>ID:</th>
+            <th>Order date:</th>
+            <th>User name:</th>
+            <th>User email:</th>
+            <th>Newsletter:</th>
+            <th>Shipping address:</th>
+            <th>Product id:</th>
+            <th>Amount:</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of list">
+            <td>{{ order.id }}</td>
+            <td>{{ order.orderdate | date }}</td>
+            <td>{{ order.userName }}</td>
+            <td>{{ order.userEmail }}</td>
+            <td>{{ order.newsletter }}</td>
+            <td>{{ order.shippingAddress }}</td>
+            <td>{{ order.productId }}</td>
+            <td>{{ order.amount }}</td>
+            <td><button type="button"
+                      class="btn btn-danger"
+                      (click)="deleteOrder(order)">Delete order</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
