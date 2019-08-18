@@ -28,7 +28,7 @@ export class ProductsAdminComponent implements OnInit, OnDestroy {
 
   deleteProduct(productObj) {
     console.log(productObj);
-    this.orderService.remove(productObj).forEach(
+    this.orderService.remove(this.urlForServer, productObj).forEach(
       data => {
         let index = this.productList.indexOf(productObj);
         this.productList.splice(index, 1);
@@ -39,9 +39,9 @@ export class ProductsAdminComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.userSubscription = this.orderService.getAll(this.urlForServer, this.oneOfTheDatas).subscribe(
-      orders => {
-        this.list = orders;
-        console.log(this.list);
+      products => {
+        this.productList = products;
+        console.log(this.productList);
       },
       err => console.error(err)
     );

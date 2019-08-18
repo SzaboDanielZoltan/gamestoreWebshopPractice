@@ -35,7 +35,7 @@ export class ChangeproductComponent {
         data => this.router.navigateByUrl("/admin/products")
       );
     } else {
-      this.os.edit(this.product).forEach(
+      this.os.edit(this.urlForServer, this.product).forEach(
         data => this.router.navigateByUrl("/admin/products")
       );
     }

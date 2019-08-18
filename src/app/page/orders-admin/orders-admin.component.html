@@ -12,11 +12,14 @@
             <th>Shipping address:</th>
             <th>Product id:</th>
             <th>Amount:</th>
-            <th></th>
+            <th>
+              <button class="btn btn-primary btn-block"
+                      routerLink="/admin/orders/0">Add new order</button>
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let order of list">
+          <tr *ngFor="let order of orderList">
             <td>{{ order.id }}</td>
             <td>{{ order.orderdate | date }}</td>
             <td>{{ order.userName }}</td>
@@ -25,9 +28,16 @@
             <td>{{ order.shippingAddress }}</td>
             <td>{{ order.productId }}</td>
             <td>{{ order.amount }}</td>
-            <td><button type="button"
-                      class="btn btn-danger"
-                      (click)="deleteOrder(order)">Delete order</button></td>
+            <td>
+              <div class="btn-group btn-block">
+                <button type="button"
+                        class="btn btn-warning"
+                        routerLink="/admin/orders/{{order.id}}">Edit</button>
+                <button type="button"
+                        class="btn btn-danger"
+                        (click)="deleteOrder(order)">Remove</button>
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>

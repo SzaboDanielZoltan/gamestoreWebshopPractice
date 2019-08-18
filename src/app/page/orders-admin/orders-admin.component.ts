@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class OrdersAdminComponent implements OnInit, OnDestroy {
   userSubscription: Subscription;
-  list;
+  orderList: Order[];
   urlForServer = '';
   oneOfTheDatas = '';
   counter = 0;
@@ -27,11 +27,10 @@ export class OrdersAdminComponent implements OnInit, OnDestroy {
   }
 
   deleteOrder(orderObj) {
-    console.log(orderObj);
-    this.orderService.remove(orderObj).forEach(
+    this.orderService.remove(this.urlForServer, orderObj).forEach(
       data => {
-        let index = this.list.indexOf(orderObj);
-        this.list.splice(index, 1);
+        let index = this.orderList.indexOf(orderObj);
+        this.orderList.splice(index, 1);
         this.counter++;
       }
     )
@@ -40,8 +39,7 @@ export class OrdersAdminComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.userSubscription = this.orderService.getAll(this.urlForServer, this.oneOfTheDatas).subscribe(
       orders => {
-        this.list = orders;
-        console.log(this.list);
+        this.orderList = orders;
       },
       err => console.error(err)
     );
