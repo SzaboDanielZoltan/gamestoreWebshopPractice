@@ -1,1 +1,36 @@
-<p>makeorder works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 text-center align-self-center">
+      <h1>{{ product.title }}</h1>
+    </div>
+    <div class="col-sm-4">
+      <img src={{product.pic}}
+           alt={{product.title}}
+           class="img-fluid">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 text-center description">{{ product.description }}</div>
+    <div class="col-sm-4">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Genre: {{ product.type }}</li>
+                <li class="list-group-item">Publisher: {{ product.publisher }}</li>
+                <li class="list-group-item">Release date: {{ product.release }}</li>
+                <li class="list-group-item">Metacritic score: {{ product.metacritic }}</li>
+                <li class="list-group-item">Price: {{ product.price | currency:'EUR'}}</li>
+              </ul>
+              <div class="card-footer">
+                <button type="button"
+                        class="btn btn-primary">Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

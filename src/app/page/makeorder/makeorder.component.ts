@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { OrderService } from 'src/app/service/order.service';
+import { Product } from 'src/app/model/product';
 
 @Component({
   selector: 'app-makeorder',
@@ -10,7 +11,7 @@ import { OrderService } from 'src/app/service/order.service';
 export class MakeorderComponent implements OnInit {
   urlForServer = '';
   oneOfTheDatas = '';
-  product;
+  product: Product;
 
   constructor(
     private ar: ActivatedRoute,

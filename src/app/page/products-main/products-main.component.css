@@ -3,6 +3,7 @@
 }
 
 .card {
+  border-radius: 2rem;
   height: 31rem;
   margin-bottom: 2rem;
 }
