@@ -1,0 +1,12 @@
+.container {
+  margin-top: 6rem;
+}
+
+.card {
+  height: 31rem;
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  font-family: 'Audiowide' ;font-size: 22px;
+}
