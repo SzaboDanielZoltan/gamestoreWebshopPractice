@@ -4,12 +4,18 @@
       <table class="table">
         <thead class="thead-light">
           <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Genre</th>
-            <th>Publisher</th>
-            <th>Price</th>
-            <th>Metacritic</th>
+            <th (click)="setSorterKey('id')"
+                class="id thtitle">ID</th>
+            <th (click)="setSorterKey('title')"
+                class="title thtitle">Title</th>
+            <th (click)="setSorterKey('type')"
+                class="type thtitle">Genre</th>
+            <th (click)="setSorterKey('publisher')"
+                class="publisher thtitle">Publisher</th>
+            <th (click)="setSorterKey('price')"
+                class="price thtitle">Price</th>
+            <th (click)="setSorterKey('metacritic')"
+                class="metacritic thtitle">Metacritic</th>
             <th>
               <button class="btn btn-primary btn-block"
                       routerLink="/admin/products/0">Add new game</button>
@@ -17,7 +23,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let product of productList">
+          <tr *ngFor="let product of productList | sort:orderKey:orderDirection:counter">
             <td>{{ product.id }}</td>
             <td>{{ product.title }}</td>
             <td>{{ product.type }}</td>

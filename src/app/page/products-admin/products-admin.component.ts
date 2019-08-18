@@ -15,6 +15,8 @@ export class ProductsAdminComponent implements OnInit, OnDestroy {
   urlForServer = '';
   oneOfTheDatas = '';
   counter = 0;
+  orderDirection: number = 1;
+  orderKey: string = 'id';
 
   constructor(
     private orderService: OrderService,
@@ -35,6 +37,22 @@ export class ProductsAdminComponent implements OnInit, OnDestroy {
         this.counter++;
       }
     )
+  }
+
+  setSorterKey(key: string): void {
+    if (key === this.orderKey) {
+      this.orderDirection = this.orderDirection === -1 ? 1 : -1;
+    } else {
+      this.orderDirection = 1;
+    }
+    this.orderKey = key;
+    Array.from(document.querySelectorAll('table thead th.thtitle')).forEach(
+      el => el.children[0] !== undefined ? el.removeChild(el.children[0]) : el);
+    if (this.orderDirection === 1) {
+      document.querySelector(`.${key}`).innerHTML += '<i class="fa fa-sort-asc" aria-hidden="true"></i>';
+    } else {
+      document.querySelector(`.${key}`).innerHTML += '<i class="fa fa-sort-desc" aria-hidden="true"></i>';
+    }
   }
 
   ngOnInit() {

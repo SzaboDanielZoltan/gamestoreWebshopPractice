@@ -4,14 +4,22 @@
       <table class="table">
         <thead class="thead-light">
           <tr>
-            <th>ID:</th>
-            <th>Order date:</th>
-            <th>User name:</th>
-            <th>User email:</th>
-            <th>Newsletter:</th>
-            <th>Shipping address:</th>
-            <th>Product id:</th>
-            <th>Amount:</th>
+            <th (click)="setSorterKey('id')"
+                class="id title">ID:</th>
+            <th (click)="setSorterKey('orderdate')"
+                class="orderdate title">Order date:</th>
+            <th (click)="setSorterKey('userName')"
+                class="userName title">User name:</th>
+            <th (click)="setSorterKey('userEmail')"
+                class="userEmail title">User email:</th>
+            <th (click)="setSorterKey('newsletter')"
+                class="newsletter title">Newsletter:</th>
+            <th (click)="setSorterKey('shippingAddress')"
+                class="shippingAddress title">Shipping address:</th>
+            <th (click)="setSorterKey('productId')"
+                class="productId title">Product id:</th>
+            <th (click)="setSorterKey('amount')"
+                class="amount title">Amount:</th>
             <th>
               <button class="btn btn-primary btn-block"
                       routerLink="/admin/orders/0">Add new order</button>
@@ -19,7 +27,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let order of orderList">
+          <tr *ngFor="let order of orderList | sort:orderKey:orderDirection:counter">
             <td>{{ order.id }}</td>
             <td>{{ order.orderdate | date }}</td>
             <td>{{ order.userName }}</td>

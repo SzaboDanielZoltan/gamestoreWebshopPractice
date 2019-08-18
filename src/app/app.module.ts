@@ -13,6 +13,7 @@ import { MakeorderComponent } from './page/makeorder/makeorder.component';
 import { ChangeorderComponent } from './page/changeorder/changeorder.component';
 import { ChangeproductComponent } from './page/changeproduct/changeproduct.component';
 import { NavbarComponent } from './page/navbar/navbar.component';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NavbarComponent } from './page/navbar/navbar.component';
     MakeorderComponent,
     ChangeorderComponent,
     ChangeproductComponent,
-    NavbarComponent
+    NavbarComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
