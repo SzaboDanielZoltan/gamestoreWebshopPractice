@@ -17,6 +17,7 @@ export class ProductsAdminComponent implements OnInit, OnDestroy {
   counter = 0;
   orderDirection: number = 1;
   orderKey: string = 'id';
+  filterPhrase: string = '';
 
   constructor(
     private orderService: OrderService,

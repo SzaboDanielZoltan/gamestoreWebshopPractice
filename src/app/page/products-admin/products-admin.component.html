@@ -1,5 +1,20 @@
 <div class="container">
   <div class="row">
+    <div class="col-4">
+      <form class="form-inline">
+        <label for="search">Search: </label>
+        <input [(ngModel)]="filterPhrase"
+               type="text"
+               id="search"
+               name="search"
+               class="form-control">
+      </form>
+      <p class="form-text text-muted">
+        It will search in description as well!
+      </p>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-12">
       <table class="table">
         <thead class="thead-light">
@@ -23,7 +38,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let product of productList | sort:orderKey:orderDirection:counter">
+          <tr
+              *ngFor="let product of productList | adminFilter:filterPhrase:counter | sort:orderKey:orderDirection:counter">
             <td>{{ product.id }}</td>
             <td>{{ product.title }}</td>
             <td>{{ product.type }}</td>

@@ -1,6 +1,6 @@
 export class Order {
   id: number = 0;
-  orderdate: Date = new Date();
+  orderdate: string = '';
   userName: string = '';
   userEmail: string = '';
   newsletter: boolean = false;
