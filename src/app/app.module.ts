@@ -15,6 +15,7 @@ import { ChangeproductComponent } from './page/changeproduct/changeproduct.compo
 import { NavbarComponent } from './page/navbar/navbar.component';
 import { SortPipe } from './pipes/sort.pipe';
 import { AdminFilterPipe } from './pipes/admin-filter.pipe';
+import { UserFilterPipe } from './pipes/user-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AdminFilterPipe } from './pipes/admin-filter.pipe';
     ChangeproductComponent,
     NavbarComponent,
     SortPipe,
-    AdminFilterPipe
+    AdminFilterPipe,
+    UserFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,8 @@ export class ProductsMainComponent implements OnInit, OnDestroy {
   list;
   urlForServer = '';
   oneOfTheDatas = '';
+  genreFilter = '';
+
 
   constructor(
     private orderService: OrderService,
@@ -24,12 +26,18 @@ export class ProductsMainComponent implements OnInit, OnDestroy {
     };
   }
 
+  genreFilterDefault() {
+    this.genreFilter = '';
+  }
 
   ngOnInit() {
     this.userSubscription = this.orderService.getAll(this.urlForServer, this.oneOfTheDatas).subscribe(
-      orders => {
-        this.list = orders;
-        console.log(this.list);
+      products => {
+        this.list = products;
+        let genrelist = new Set();
+        products.forEach(product => genrelist.add(product.type));
+        genrelist.forEach(genre =>
+          document.querySelector('#genre').innerHTML += `<option value="${genre}">${genre}</option>`)
       },
       err => console.error(err)
     );

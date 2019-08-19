@@ -1,7 +1,34 @@
 <div class="container">
   <div class="row">
+    <div class="col-sm-4">
+      <form class="form-inline">
+        <label for="search">Search by name: </label>
+        <input [(ngModel)]="filterPhrase"
+               type="text"
+               id="search"
+               name="search"
+               class="form-control"
+               (input)="genreFilterDefault()">
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="genre">Select by genre: </label>
+          <select class="form-control"
+                  name="genre"
+                  id="genre"
+                  [(ngModel)]="genreFilter">
+            <option disabled
+                    selected>Choose</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-sm-4"
-         *ngFor="let product of list">
+         *ngFor="let product of list | userFilter:filterPhrase:genreFilter">
       <div class="card bg-secondary text-white">
         <img src={{product.pic}}
              class="card-img-top"
