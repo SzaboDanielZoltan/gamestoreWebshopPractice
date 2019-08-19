@@ -9,12 +9,15 @@
                name="search"
                class="form-control">
       </form>
+      <p class="form-text text-muted">
+        It will search in description as well!
+      </p>
     </div>
   </div>
   <div class="row">
     <div class="col-12">
-      <table class="table">
-        <thead class="thead-light">
+      <table class="table table-hover">
+        <thead class="thead-dark">
           <tr>
             <th (click)="setSorterKey('id')"
                 class="id title">ID:</th>
@@ -41,10 +44,13 @@
         <tbody>
           <tr *ngFor="let order of orderList | adminFilter:filterPhrase:counter | sort:orderKey:orderDirection:counter">
             <td>{{ order.id }}</td>
-            <td>{{ order.orderdate | date }}</td>
+            <td>{{ order.orderdate | date:'medium' }}</td>
             <td>{{ order.userName }}</td>
             <td>{{ order.userEmail }}</td>
-            <td>{{ order.newsletter }}</td>
+            <td><input type="checkbox"
+                     [(ngModel)]="order.newsletter"
+                     class="form-control"
+                     disabled></td>
             <td>{{ order.shippingAddress }}</td>
             <td>{{ order.productId }}</td>
             <td>{{ order.amount }}</td>

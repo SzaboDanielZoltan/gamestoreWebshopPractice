@@ -15,13 +15,13 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col">
-            <div class="card">
+            <div class="card bg-dark">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Genre: {{ product.type }}</li>
-                <li class="list-group-item">Publisher: {{ product.publisher }}</li>
-                <li class="list-group-item">Release date: {{ product.release }}</li>
-                <li class="list-group-item">Metacritic score: {{ product.metacritic }}</li>
-                <li class="list-group-item">Price: {{ product.price | currency:'EUR'}}</li>
+                <li class="list-group-item list-group-item-dark">Genre: {{ product.type }}</li>
+                <li class="list-group-item list-group-item-dark">Publisher: {{ product.publisher }}</li>
+                <li class="list-group-item list-group-item-dark">Release date: {{ product.release }}</li>
+                <li class="list-group-item list-group-item-dark">Metacritic score: {{ product.metacritic }}</li>
+                <li class="list-group-item list-group-item-dark">Price: {{ product.price | currency:'EUR'}}</li>
               </ul>
               <div class="card-footer">
                 <button type="button"

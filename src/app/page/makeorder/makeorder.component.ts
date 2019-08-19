@@ -28,7 +28,7 @@ export class MakeorderComponent implements OnInit {
         this.product = product;
         this.order = {
           "id": 0,
-          "orderdate": new Date().toDateString(),
+          "orderdate": new Date(),
           "userName": "",
           "userEmail": "",
           "newsletter": false,

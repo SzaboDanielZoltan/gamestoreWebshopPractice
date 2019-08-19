@@ -4,10 +4,18 @@
 
 .card {
   border-radius: 2rem;
-  height: 31rem;
+  height: 32rem;
   margin-bottom: 2rem;
+}
+
+img {
+  border-radius: 2rem;
 }
 
 .card-title {
   font-family: 'Audiowide' ;font-size: 22px;
+}
+
+a {
+  color: #ffffff;
 }

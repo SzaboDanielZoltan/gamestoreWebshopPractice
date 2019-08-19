@@ -6,3 +6,12 @@
 .description {
   margin-top: 2rem;
 }
+
+.card {
+  border-radius: 2rem;
+}
+
+img {
+  border-radius: 2rem;
+}
+

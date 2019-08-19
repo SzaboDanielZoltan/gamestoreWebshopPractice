@@ -44,9 +44,9 @@ module.exports = class DB {
   postToJsonArray(newObject) {
     this.getJsonArray().then(
       (jsonArray) => {
-        let newID = 0;
-        jsonArray.forEach(el => (el.id >= newID ? newID = el.id : newID));
-        newObject.id = newID + 1;
+        let maxID = 0;
+        jsonArray.forEach(el => (el.id >= maxID ? maxID = el.id : maxID));
+        newObject.id = maxID + 1;
         jsonArray.push(newObject);
         fs.writeFile(this.jsonFilePath, JSON.stringify(jsonArray), 'utf8', err => console.error(err));
       },
