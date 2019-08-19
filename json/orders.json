@@ -1,12 +1,1 @@
-[
-  {
-    "id": 1,
-    "orderdate": "Mon Aug 19 2019",
-    "userName": "",
-    "userEmail": "",
-    "newsletter": false,
-    "shippingAddress": "",
-    "productId": 2,
-    "amount": 1
-  }
-]
+[]
